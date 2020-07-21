@@ -1,8 +1,10 @@
-from pygame import mixer
+'''This program plays different songs by choosing no. b/w 1-10
+   You can add different songs and their path'''
+from pygame import mixer         # import mixer class from pygame package
 n=int(input("Choose any no. b/w 1-10 \n"))
-file=""
+file=""                                          #empty string
 if(n==1):
-    file="F:\Mixed songs\Luh_Kel_-_Wrong_(Lyrics)(128k).mp3"
+    file="F:\Mixed songs\Luh_Kel_-_Wrong_(Lyrics)(128k).mp3"              # create a file with path and name of music file same goes for other nine songs          
     mixer.init()
 elif(n==2):
     file="F:\Mixed songs\Hosanna.mp3"
@@ -34,12 +36,5 @@ elif(n==10):
 else:
     print("")
     
-mixer.music.load(file)
-mixer.music.play()
-
-'''Main code:-
-from pygame import mixer             # import mixer class from pygame 
-file="F:\Mixed songs\Tera Yaar Hoon Main.mp3"             # create a file with path and name of music file
-mixer.init()                                                       
-mixer.music.load(file)
-mixer.music.play()'''
+mixer.music.load(file)        # loading music 
+mixer.music.play()     # palying music
